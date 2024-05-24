@@ -8,7 +8,7 @@ class Alien(pygame.sprite.Sprite):
         self.x = x
         self.y = y
         self.atype = atype
-        self.frame = 0
+        self.frame = 1
         self.imagen = pygame.image.load('imagenes/aliens_sm.png')
         self.sprite_size = 32
         self.rect = self.imagen.get_rect()
@@ -22,7 +22,6 @@ class Alien(pygame.sprite.Sprite):
             self.frame = 0
 
     def draw(self, screen):
-        # self.flip_frame()
         self.rect.topleft = (self.x * self.sprite_size + 10,
                              self.y * self.sprite_size + 50)
         screen.blit(self.imagen, [self.x * self.sprite_size + 10,
